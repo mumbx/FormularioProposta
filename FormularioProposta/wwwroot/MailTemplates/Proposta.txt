@@ -1,0 +1,25 @@
+<div class="card m-2 col-sm-12 col-md-3 col-xl-3" style="max-width: 22rem; ">
+            <div class="card-body">
+                <p class="card-title font-weight-bolder text-center">
+                    Proposta #@Html.DisplayFor(ModelItem => item.Id)<br />
+                    <strong><small>@Html.DisplayFor(ModelItem => item.DataProposta)</small></strong>
+                </p>
+
+                <h6 class="card-subtitle mb-2 text-muted text-center"> DADOS </h6>
+                <p>
+                    <small>
+                        @Html.DisplayFor(ModelItem => item.NomeCliente)     <br />
+                        <i class="fa fa-envelope" aria-hidden="true"></i>  @Html.DisplayFor(ModelItem => item.EmailCliente)    <br />
+                        <i class="fa fa-phone-square" aria-hidden="true"></i>  @Html.DisplayFor(ModelItem => item.Telefone)        <br />
+                        <strong>R$</strong>@Html.DisplayFor(ModelItem => item.ValorRenda),00
+                    </small>
+                </p>
+                <h6 class="card-subtitle mb-2 text-muted text-center">Mensagem</h6>
+
+                <p class="card-text">@Html.DisplayFor(ModelItem => item.Mensagem)</p>
+                <hr />
+
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash float-right" aria-hidden="true"></i></a>
+               
+            </div>
+        </div>

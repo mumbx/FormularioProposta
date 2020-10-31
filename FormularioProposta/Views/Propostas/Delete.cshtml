@@ -1,0 +1,42 @@
+﻿@model FormularioProposta.Models.Proposta
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+<div class="row m-2 p-1 justify-content-around">
+    <div class="d-inline-flex">
+
+        <div class="col-12 p-4 text-center">
+            
+
+            <h3>Você tem certeza que deseja deletar a proposta #@Html.DisplayFor(model => model.Id)?</h3>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row m-2 p-4 justify-content-around">
+
+    <div class="form-group text-center">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Deletar" class="btn btn-primary" /> |
+            <a asp-action="Index">Voltar para propostas</a>
+        </form>
+    </div>
+     
+
+</div>
+
+<div class="row m-2 p-1 mx-auto justify-content-center w-25">
+
+  
+    <div>
+        <p class="text-center text-muted"> Mensagem </p>
+        <hr />
+        <small>@Html.DisplayFor(model => model.Mensagem)</small>
+    </div>
+
+</div>
+
